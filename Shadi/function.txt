@@ -1,0 +1,33 @@
+def reverse_string(input_string):
+    return input_string[::-1]
+
+def is_palindrome(input_string):
+    # Remove non-alphanumeric characters and convert to lowercase
+    processed_string = ''.join(ch.lower() for ch in input_string if ch.isalnum())
+    return processed_string == processed_string[::-1]
+
+def remove_duplicates(input_list):
+    return list(set(input_list))
+
+def list_sum(input_list):
+    return sum(input_list)
+
+def remove_element(input_list, element):
+    return [x for x in input_list if x != element]
+
+# Testing the functions
+input_string = "hello"
+print("Reverse:", reverse_string(input_string))
+
+input_string = "sosa"
+print("Is Palindrome:", is_palindrome(input_string))
+
+input_list = [3, 2, 2, 4, 5]
+print("Remove Duplicates:", remove_duplicates(input_list))
+
+input_list = [5, 5, 5]
+print("List Sum:", list_sum(input_list))
+
+input_list = [1, 2, 6, 5, 3]
+element = 3
+print("Remove Element:", remove_element(input_list, element))
